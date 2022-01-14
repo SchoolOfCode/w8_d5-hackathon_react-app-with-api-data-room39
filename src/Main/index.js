@@ -11,12 +11,10 @@ export default function Main() {
         const response = await fetch(`http://jservice.io/api/random`)
         const data = await response.json()
         setState(data)
-          console.log(data)
-        
       }
-  
       fetchMyAPI()
     },[])
+    console.log(state)
   return (
     <div>
       {/* <Title />
