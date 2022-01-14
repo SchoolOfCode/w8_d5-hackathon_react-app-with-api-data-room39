@@ -5,7 +5,7 @@ import Form from './Form.js'
 import Question from './Question.js'
 
 export default function Main() {
-  const [state, setState] = useState('')
+  const [state, setState] = useState([])
     useEffect(() => {
       async function fetchMyAPI() {
         const response = await fetch(`http://jservice.io/api/random`)
@@ -14,11 +14,11 @@ export default function Main() {
       }
       fetchMyAPI()
     },[])
-    console.log(state)
+    console.log(state.answer)
   return (
     <div>
-      {/* <Title />
-      <Question />
+      <Title title={state}/>
+         {/* <Question question={state[0].question}/>
       <Clue />
       <Form /> */}
     </div>
