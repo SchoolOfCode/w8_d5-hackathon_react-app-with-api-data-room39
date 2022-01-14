@@ -5,6 +5,7 @@ import Question from './Question.js'
 
 export default function Main() {
   const [step, setStep] = useState(0)
+
   const [state, setState] = useState([
     { title: ' ', question: ' ', answer: '' },
   ])
@@ -29,7 +30,7 @@ export default function Main() {
       <Title title={state[0].title} />
       <Question question={state[0].question} />
       <Form answer={state[0].answer} />
-      <button onClick={() => setStep(step + 1)}>Next Question</button>
+      <button onClick={() => window.location.reload()}>Next Question</button>
     </div>
   )
 }
