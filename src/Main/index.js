@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Title from './Title.js'
 import Clue from './Clue.js'
-import Form from './Submit.js'
+import Form from './Form.js'
 import Question from './Question.js'
 
 export default function Main() {
@@ -29,7 +29,7 @@ export default function Main() {
       <Title title={state[0].title} />
       <Question question={state[0].question} />
       {/* <Clue />*/}
-      <Form />
+      <Form answer={state[0].answer} />
     </div>
   )
 }
