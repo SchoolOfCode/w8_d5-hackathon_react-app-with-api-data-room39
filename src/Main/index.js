@@ -32,7 +32,8 @@ export default function Main() {
       <Question question={state[0].question} />
       <p3>Please Submit your Answer or Click Reveal to see the answer</p3>
       <Form answer={state[0].answer} />
-      Click Below for the next Question
+      <p4> Click here for the next Question ====> </p4>
+      
       <button onClick={() => window.location.reload()}>Next Question</button>
     </div>
   )
