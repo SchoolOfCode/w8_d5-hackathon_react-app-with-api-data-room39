@@ -26,9 +26,13 @@ export default function Main() {
   console.log(state)
   return (
     <div className='main'>
+    <h1>Your Clue</h1>
       <Title title={state[0].title} />
+      <h2>Your Question</h2>
       <Question question={state[0].question} />
+      <p3>Please Submit your Answer or Click Reveal to see the answer</p3>
       <Form answer={state[0].answer} />
+      Click Below for the next Question
       <button onClick={() => window.location.reload()}>Next Question</button>
     </div>
   )
