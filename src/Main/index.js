@@ -4,8 +4,6 @@ import Form from './Form.js'
 import Question from './Question.js'
 
 export default function Main() {
-  const [step, setStep] = useState(0)
-
   const [state, setState] = useState([
     { title: ' ', question: ' ', answer: '' },
   ])
@@ -23,7 +21,7 @@ export default function Main() {
       ])
     }
     fetchMyAPI()
-  }, [step])
+  }, [])
   console.log(state)
   return (
     <div>
