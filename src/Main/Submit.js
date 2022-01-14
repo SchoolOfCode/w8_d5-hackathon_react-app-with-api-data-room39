@@ -6,7 +6,7 @@ export default function Form() {
 
   function handleForm(e) {
     e.preventDefault()
-    setAnswer(state)
+    setAnswer(answer)
   }
 
   return (
@@ -15,7 +15,7 @@ export default function Form() {
         <input onChange={(e) => setState(state)}></input>
         <button type='submit'>Submit Answer</button>
       </form>
-      <button>Reveal Answer</button>
+      <button classname='Answerbtn'>Reveal Answer</button>
     </div>
   )
 }
