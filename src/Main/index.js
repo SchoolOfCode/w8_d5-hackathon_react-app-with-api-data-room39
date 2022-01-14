@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import "./style.css"
 import Title from './Title.js'
 import Form from './Form.js'
 import Question from './Question.js'
@@ -24,7 +25,7 @@ export default function Main() {
   }, [])
   console.log(state)
   return (
-    <div>
+    <div className='main'>
       <Title title={state[0].title} />
       <Question question={state[0].question} />
       <Form answer={state[0].answer} />
