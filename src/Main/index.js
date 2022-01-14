@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import Title from './Title.js'
 import Form from './Form.js'
 import Question from './Question.js'
 
-
 export default function Main() {
+  const [step, setStep] = useState(0)
   const [state, setState] = useState([
     { title: ' ', question: ' ', answer: '' },
   ])
@@ -23,14 +22,14 @@ export default function Main() {
       ])
     }
     fetchMyAPI()
-  }, [])
+  }, [step])
   console.log(state)
   return (
     <div>
       <Title title={state[0].title} />
       <Question question={state[0].question} />
       <Form answer={state[0].answer} />
-      <p><Link to='/' >Next Question</Link></p>
+      <button onClick={() => setStep(step + 1)}>Next Question</button>
     </div>
   )
 }
