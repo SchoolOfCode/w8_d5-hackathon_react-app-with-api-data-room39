@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import Title from './Title.js'
-import Clue from './Clue.js'
 import Form from './Form.js'
 import Question from './Question.js'
+
 
 export default function Main() {
   const [state, setState] = useState([
@@ -28,8 +29,8 @@ export default function Main() {
     <div>
       <Title title={state[0].title} />
       <Question question={state[0].question} />
-      {/* <Clue />*/}
       <Form answer={state[0].answer} />
+      <p><Link to='/' >Next Question</Link></p>
     </div>
   )
 }
