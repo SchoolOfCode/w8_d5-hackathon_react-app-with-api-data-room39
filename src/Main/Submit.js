@@ -6,7 +6,10 @@ export default function Form() {
 
   function handleForm(e) {
     e.preventDefault()
-    setAnswer(answer)
+    setAnswer(state)
+  }
+  function handleReveal() {
+    setAnswer(state)
   }
 
   return (
@@ -15,7 +18,7 @@ export default function Form() {
         <input onChange={(e) => setState(state)}></input>
         <button type='submit'>Submit Answer</button>
       </form>
-      <button classname='Answerbtn'>Reveal Answer</button>
+      <button classname='Answerbtn' onclick={handleReveal}>Reveal Answer</button>
     </div>
   )
 }
